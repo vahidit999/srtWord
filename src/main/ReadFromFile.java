@@ -19,6 +19,10 @@ public class ReadFromFile {
         return list;
     }
 
+//    private Set initilizeList (List srt) {
+//        Set set = new HashSet();
+//        for
+//    }
     //# todo split all the subtitles
     //# todo find each sentence and compare with another one
     //# todo find every word and meanings
