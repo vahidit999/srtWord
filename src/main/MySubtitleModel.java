@@ -1,45 +1,53 @@
 package main;
 
 import java.io.Serializable;
+import java.sql.Time;
 
 public class MySubtitleModel implements Serializable {
 
-    MySubtitleModel (String subTime ,Integer subEnInx,String subEn ,Integer subFaInx,String subFa ){
-        this.subTime = subTime;
-        this.subEnInx = subEnInx;
-        this.subEn = subEn;
-        this.subFaInx = subFaInx;
-        this.subFa = subFa;
-    }
-
-    private String subTime ;
+    private String subtitleTime;
+    private Time startTime;
+    private Time endTime;
     private Integer subEnInx;
-    private String subEn ;
-    private Integer subFaInx;
-    private String subFa ;
-
-    public String getSubTime() {
-        return subTime;
+    private String subtitle;
+    MySubtitleModel(String subtitleTime, Integer subEnInx, String subtitle , Time startTime , Time endTime) {
+        this.subtitleTime = subtitleTime;
+        this.subEnInx = subEnInx;
+        this.subtitle = subtitle;
+        this.startTime = startTime;
+        this.endTime = endTime;
     }
 
-    public void setSubTime(String subTime) {
-        this.subTime = subTime;
+    public String getSubtitleTime() {
+        return subtitleTime;
     }
 
-    public String getSubEn() {
-        return subEn;
+    public void setSubtitleTime(String subtitleTime) {
+        this.subtitleTime = subtitleTime;
     }
 
-    public void setSubEn(String subEn) {
-        this.subEn = subEn;
+    public Time getStartTime() {
+        return startTime;
     }
 
-    public String getSubFa() {
-        return subFa;
+    public void setStartTime(Time startTime) {
+        this.startTime = startTime;
     }
 
-    public void setSubFa(String subFa) {
-        this.subFa = subFa;
+    public Time getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Time endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 
     public Integer getSubEnInx() {
@@ -48,13 +56,5 @@ public class MySubtitleModel implements Serializable {
 
     public void setSubEnInx(Integer subEnInx) {
         this.subEnInx = subEnInx;
-    }
-
-    public Integer getSubFaInx() {
-        return subFaInx;
-    }
-
-    public void setSubFaInx(Integer subFaInx) {
-        this.subFaInx = subFaInx;
     }
 }
